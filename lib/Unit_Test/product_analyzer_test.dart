@@ -5,8 +5,8 @@ import '../Logic/product analyzer.dart';
 void main() {
   group('ProductAnalyzer', () {
     late ProductAnalyzer productAnalyzer;
-    const sampleCsvPath = 'ex: C:\\Users\\user_name\\Desktop\\products.csv';
-    const outputDirectory = 'ex: C:\\Users\\user_name\\StudioProjects\\csv_files_analysis';
+    const sampleCsvPath = 'C:\\Users\\nader\\OneDrive\\Desktop\\products.csv';
+    const outputDirectory = 'C:\\Users\\nader\\StudioProjects\\My_Project\\csv_files_analysis';
 
     setUp(() {
       productAnalyzer = ProductAnalyzer(sampleCsvPath);
