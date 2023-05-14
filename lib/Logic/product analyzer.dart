@@ -11,9 +11,9 @@ class ProductAnalyzer {
   void analyzeProducts() {
     final inputCsvFile = File(inputFileName);
     final csvString = inputCsvFile.readAsStringSync();
-    final products = _parseCsvData(csvString);
+    final products = parseCsvData(csvString);
     final totalRecords = products.length;
-    final groupedProducts = _groupProductsByName(products);
+    final groupedProducts = groupProductsByName(products);
 
     final averageQuantityData = <List<dynamic>>[];
     final popularBrandData = <List<dynamic>>[];
@@ -23,10 +23,10 @@ class ProductAnalyzer {
       final productsByName = entry.value;
 
       final averageQuantity =
-          _calculateAverageQuantity(productsByName, totalRecords);
+          calculateAverageQuantity(productsByName, totalRecords);
       averageQuantityData.add([productName, averageQuantity]);
 
-      final popularBrand = _findMostPopularBrand(productsByName);
+      final popularBrand = findMostPopularBrand(productsByName);
       popularBrandData.add([productName, popularBrand]);
     }
 
@@ -48,7 +48,7 @@ class ProductAnalyzer {
   }
 }
 
-List<Product> _parseCsvData(String csvString) {
+List<Product> parseCsvData(String csvString) {
   final csvData = CsvToListConverter().convert(csvString);
 
   final products = <Product>[];
@@ -64,7 +64,7 @@ List<Product> _parseCsvData(String csvString) {
   return products;
 }
 
-Map<String, List<Product>> _groupProductsByName(List<Product> products) {
+Map<String, List<Product>> groupProductsByName(List<Product> products) {
   final groupedProducts = <String, List<Product>>{};
   for (final product in products) {
     if (!groupedProducts.containsKey(product.name)) {
@@ -77,13 +77,13 @@ Map<String, List<Product>> _groupProductsByName(List<Product> products) {
   return groupedProducts;
 }
 
-double _calculateAverageQuantity(List<Product> products, int totalRecords) {
+double calculateAverageQuantity(List<Product> products, int totalRecords) {
   final totalQuantity =
   products.fold(0, (sum, product) => sum + product.quantity);
   return totalQuantity / totalRecords;
 }
 
-String _findMostPopularBrand(List<Product> products) {
+String findMostPopularBrand(List<Product> products) {
   final brandCounts = <String, int>{};
   for (final product in products) {
     final brand = product.brand;
