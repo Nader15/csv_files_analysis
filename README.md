@@ -6,6 +6,8 @@
 - Second one contain Product Name and the most popular Brand for that product ( Most popular is defined as the brand
   with the most total orders for the item ).
 
+
+  
 ## CSV File Example
 
 I have manually created a CSV File to test project and complete coding process, feel free to use it, Or you can use any other CSV file as mentioned in the task description.
@@ -13,7 +15,8 @@ I have manually created a CSV File to test project and complete coding process, 
 - Download the example file [Download](https://drive.google.com/file/d/1aw3uEvZamekve08Ge5e3HTKwpXkOXg5O/view?usp=sharing)
 
 
-## ScreenShot of final Created Tow Files
+
+## ScreenShot of final created tow files
 
 <table>
     <tr>
@@ -22,7 +25,8 @@ I have manually created a CSV File to test project and complete coding process, 
 </table>
 
 
-## Unit Test
+
+## Unit Testing
 
   unit tests for the ProductAnalyzer class that handle: 
 
@@ -31,11 +35,15 @@ I have manually created a CSV File to test project and complete coding process, 
 - Calculate Average Quantity of Product in each record to generate first file
 - Find Most Popular Brand in each record to generate second file
 
-  * note : when applying unit test on your CSV File, don't forget to change variables of (Local File Path and Project Directory)
-    const sampleCsvPath = 'C:\\Users\\nader\\OneDrive\\Desktop\\products.csv';
-    const outputDirectory = 'C:\\Users\\nader\\StudioProjects\\My_Project\\csv_files_analysis';
 
-## ScreenShot of Unit Test Result
+  * note : when applying unit test on your CSV File, don't forget to change variables of (Local File Path and Project Directory)
+
+    - const sampleCsvPath = 'C:\\Users\\nader\\OneDrive\\Desktop\\products.csv';
+    - const outputDirectory = 'C:\\Users\\nader\\StudioProjects\\My_Project\\csv_files_analysis';
+
+
+
+## ScreenShot of Unit Testing Result
 
 <table>
     <tr>
